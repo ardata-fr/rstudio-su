@@ -23,7 +23,10 @@ ENV LD_LIBRARY_PATH="/lib:/usr/lib/x86_64-linux-gnu:/opt/conda/lib/R/lib"
 ENV PATH=$PATH:/usr/lib/rstudio-server/bin
 
 USER root
-ADD package_1.0.0.tar.gz /tmp/package_1.0.0.tar.gz
-RUN cd /tmp && R CMD INSTALL package_1.0.0.tar.gz
+
+ADD package.R .
+RUN R -e 'source("package.R")'
 
 USER $NB_UID
+
+CMD ["bash"]
