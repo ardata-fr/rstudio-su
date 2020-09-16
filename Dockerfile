@@ -27,4 +27,29 @@ USER root
 ADD package.R .
 RUN R -e 'source("package.R")'
 
+# R packages
+RUN conda install --quiet --yes \
+    'r-bh' \
+    'r-stringi' \
+    'r-rcpp' \
+    'r-testthat' \
+    'r-tidyverse' \
+    'r-broom' \
+    'r-caret' \
+    'r-curl' \
+    'r-data.table' \
+    'r-dbi' \
+    'r-dbplyr' \
+    'r-lubridate' \
+    'r-stringr' \
+    'r-rvg' \
+    'r-flextable' \
+    'r-sf' \
+    'r-openssl' \
+    'r-shiny' \
+    'r-shinywidgets' \
+    && conda clean --all -f -y
+
+
+
 USER $NB_UID
