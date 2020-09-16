@@ -28,5 +28,3 @@ ADD package.R .
 RUN R -e 'source("package.R")'
 
 USER $NB_UID
-
-CMD ["bash"]
