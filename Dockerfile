@@ -47,7 +47,9 @@ RUN conda install --quiet --yes \
     'r-sf' \
     'r-openssl' \
     'r-shiny' \
+    'r-magick' \
     'r-shinywidgets' \
+    'r-roxygen2' \
     && conda clean --all -f -y
 
 
