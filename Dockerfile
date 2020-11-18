@@ -49,6 +49,7 @@ RUN conda install --quiet --yes \
     'r-shiny' \
     'r-magick' \
     'r-shinywidgets' \
+    'r-skimr' \
     'r-roxygen2' \
     && conda clean --all -f -y
 
