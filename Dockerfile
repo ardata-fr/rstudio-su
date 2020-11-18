@@ -1,4 +1,4 @@
-ARG ROOT_CONTAINER=davidgohel/minimal-nb:r-4.0.2
+ARG ROOT_CONTAINER=davidgohel/minimal-nb:r-4.0.3
 ARG BASE_CONTAINER=$ROOT_CONTAINER
 FROM $BASE_CONTAINER
 
