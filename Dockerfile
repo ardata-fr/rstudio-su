@@ -51,6 +51,8 @@ RUN conda install --quiet --yes \
     'r-shinywidgets' \
     'r-skimr' \
     'r-roxygen2' \
+    'r-xlsx' \
+    'r-openxlsx' \
     && conda clean --all -f -y
 
 
