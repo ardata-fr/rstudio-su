@@ -1,4 +1,4 @@
-ARG ROOT_CONTAINER=davidgohel/minimal-nb:r-4.0.3
+ARG ROOT_CONTAINER=davidgohel/minimal-nb:r-20210304
 ARG BASE_CONTAINER=$ROOT_CONTAINER
 FROM $BASE_CONTAINER
 
@@ -30,8 +30,12 @@ RUN R -e 'source("package.R")'
 # R packages
 RUN conda install --quiet --yes \
     'r-bh' \
+    'r-crayon' \
+    'r-devtools' \
     'r-stringi' \
     'r-rcpp' \
+    'r-htmltools' \
+    'r-rjava' \
     'r-testthat' \
     'r-tidyverse' \
     'r-broom' \
@@ -55,6 +59,8 @@ RUN conda install --quiet --yes \
     'r-openxlsx' \
     && conda clean --all -f -y
 
+    
+    
 
 
 USER $NB_UID
